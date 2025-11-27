@@ -1,0 +1,213 @@
+ @import url('https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Hand+Pre:wght@600&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Italiana&family=Martel+Sans:wght@200;300;400;600;700;800;900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Style+Script&family=Young+Serif&display=swap');
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+
+ body {
+     background: #3d3980;
+     background: linear-gradient(124deg, rgba(61, 57, 128, 1) 0%, rgba(63, 63, 235, 1) 35%, rgba(86, 208, 245, 1) 90%, rgba(0, 212, 255, 1) 100%);
+     font-family: Arial, sans-serif;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     height: 100vh;
+
+ }
+
+ .container {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     background-color: #fff;
+     padding: 20px;
+     border-radius: 10px;
+     border: 1px solid #ccc;
+     width: 30%;
+     height: 60%;
+     margin: 50px auto;
+
+ }
+
+ h2 {
+     text-transform: uppercase;
+     font-family: "Rubik", sans-serif;
+     font-weight: 600;
+     margin-bottom: 5px;
+
+ }
+
+    h2:hover{
+            color: blueviolet;
+            transform: scale(1.1);
+            transition: 0.8s;
+    }
+
+
+ .table{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    height: 100%;
+ }
+
+ .label {
+     display: flex;
+     flex-direction: column;
+     /* align-items: center; */
+     padding: 2px 5px;
+     width: 100%;
+     margin: 10px;
+     /* margin-bottom: 10px; */
+     font-weight: bold;
+ }
+
+ input {
+    width: 300px;
+     padding: 8px;
+     margin-top: 5px;
+     border: 1px solid #ccc;
+     border-radius: 5px;
+     outline: none;
+     border: 1px solid blueviolet;
+     font-size: 16px;
+     font-family: "Inter", sans-serif;
+ }
+
+ input:focus {
+     border: 2px solid blueviolet;
+     
+ }
+
+ label {
+     font-size: 18px;
+ }
+
+ button {
+     width: 30%;
+     height: 10%;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     background-color: blueviolet;
+     color: white;
+     border: none;
+     border-radius: 4px;
+     margin-top: 10px;
+     font-size: large;
+     text-transform: uppercase;
+     font-family: "Rubik", serif;
+ }
+/* 
+ body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+ }
+
+ .loader{
+    height: 600px;
+    width: 600px;
+    background-color: blue;
+    display: flex;
+    justify-content: center ;
+    align-items:center;
+    border-radius: 50%;
+    gap: 10px;
+     flex-wrap: wrap; 
+ }
+
+.one{
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    display: flex;  
+    justify-content: center ;
+    align-items:center;
+    font-size: 22px;
+    color: white;
+    font-weight: 500;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.two{
+    height: 100px;
+    width: 100px;
+    background-color: blueviolet;
+      display: flex;  
+    justify-content: center ;
+    align-items:center;
+    font-size: 22px;
+    color: white;
+    font-weight: 500;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.three{
+    height: 100px;
+    width: 100px;
+    background-color: yellow;
+      display: flex;  
+    justify-content: center ;
+    align-items:center;
+    font-size: 22px;
+    color: white;
+    font-weight: 500;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.one:hover{
+    background-color: #fff;
+   transition: 0.5s;
+   color: black;
+   border-radius: 50%;
+}
+.two:hover{
+    background-color:greenyellow;
+   transition: 0.5s;
+    color: black;
+   border-radius: 50%;
+
+}
+.three:hover{
+    background-color: burlywood;
+   transition: 0.5s;
+    color: black;
+   border-radius: 50%;
+}
+
+.loader:hover .one{
+    transform: translateX(-150px);
+    transition: 5s;
+
+}
+.loader:hover .two{
+    transform: translateY(-100px);
+    transition: 5s;
+ }
+ .loader:hover .three{
+    transform: translateX(150px);
+    transition: 5s;
+ }
+  .container {
+  display: flex;
+  align-items: center;
+  height: 200px;
+  background: lightgray;
+} 
+.box {
+  width: 50px;
+  height: 50px;
+  background: coral;
+  margin: 10px;
+} */
+
+/* .special {
+  align-self: flex-end; 
+} */
+

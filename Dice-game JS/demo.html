@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dice Game</title>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Merriweather:wght@700&family=Roboto:wght@500&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: black;
+      color: yellow;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      font-family: "Inter", sans-serif;
+    }
+
+    .main {
+      border: 2px solid aqua;
+      border-radius: 15px;
+      width: 400px;
+      height: 520px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: #000;
+    }
+
+    #head {
+      margin-bottom: 30px;
+      font-family: "Merriweather", serif;
+      text-transform: capitalize;
+      color: aqua;
+    }
+
+    #result {
+      font-size: 20px;
+      font-family: "Roboto", sans-serif;
+      margin-bottom: 10px;
+    }
+
+    img {
+      height: 120px;
+      width: 120px;
+      margin: 5px;
+      transition: transform 0.5s ease;
+    }
+
+    .rotate {
+      transform: rotate(360deg);
+    }
+
+    .dice {
+      display: flex;
+      gap: 10px;
+      margin: 15px;
+      align-items: center;
+      justify-content: center;
+      font-family: "Roboto", sans-serif;
+      font-size: 16px;
+    }
+
+    #rollDice {
+      display: none;
+    }
+
+    button {
+      width: 120px;
+      height: 50px;
+      margin: 5px;
+      outline: none;
+      border: none;
+      background-color: rgb(243, 243, 46);
+      color: black;
+      font-size: 18px;
+      font-weight: 600;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: yellow;
+      transition: 0.3s;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="main">
+    <h1 id="head">Let's Play!</h1>
+    <h1 id="count"></h1>
+    <h2 id="result"></h2>
+
+    <div class="dice">
+      <div class="player1">
+        <h3>Player 1</h3>
+        <img id="img1" src="https://upload.wikimedia.org/wikipedia/commons/1/14/Dice-1-b.svg" alt="">
+      </div>
+      <div class="player2">
+        <h3>Player 2</h3>
+        <img id="img2" src="https://upload.wikimedia.org/wikipedia/commons/1/14/Dice-1-b.svg" alt="">
+      </div>
+    </div>
+
+    <button id="start">Start</button>
+    <button id="rollDice">Roll Dice</button>
+  </div>
+
+  <script>
+    const diceOne = document.getElementById("img1");
+    const diceTwo = document.getElementById("img2");
+    const resultView = document.getElementById("result");
+    const start = document.getElementById("start");
+    const count = document.getElementById("count");
+    const rollDice = document.getElementById("rollDice");
+
+    // Start countdown
+    start.addEventListener("click", () => {
+      start.style.display = "none";
+      let timeLeft = 4;
+      count.textContent = timeLeft;
+
+      const timer = setInterval(() => {
+        timeLeft--;
+        if (timeLeft > 0) {
+          count.textContent = timeLeft;
+        } else {
+          clearInterval(timer);
+          count.textContent = "GO!";
+
+          setTimeout(() => {
+            count.style.display = "none";
+            rollDice.style.display = "block";
+          }, 1000);
+        }
+      }, 1000);
+    });
+
+    // Roll dice click event
+    rollDice.addEventListener("click", () => {
+      // random dice 1–6
+      const random1 = Math.floor(Math.random() * 6) + 1;
+      const random2 = Math.floor(Math.random() * 6) + 1;
+
+      diceOne.src = `https://upload.wikimedia.org/wikipedia/commons/${random1 === 1 ? '1/14/Dice-1-b.svg' :
+        random1 === 2 ? '5/5f/Dice-2-b.svg' :
+          random1 === 3 ? 'b/b1/Dice-3-b.svg' :
+            random1 === 4 ? 'f/fd/Dice-4-b.svg' :
+              random1 === 5 ? '0/08/Dice-5-b.svg' :
+                '2/26/Dice-6-b.svg'}`;
+
+      diceTwo.src = `https://upload.wikimedia.org/wikipedia/commons/${random2 === 1 ? '1/14/Dice-1-b.svg' :
+        random2 === 2 ? '5/5f/Dice-2-b.svg' :
+          random2 === 3 ? 'b/b1/Dice-3-b.svg' :
+            random2 === 4 ? 'f/fd/Dice-4-b.svg' :
+              random2 === 5 ? '0/08/Dice-5-b.svg' :
+                '2/26/Dice-6-b.svg'}`;
+
+      // rotate animation
+      diceOne.classList.add("rotate");
+      diceTwo.classList.add("rotate");
+
+      setTimeout(() => {
+        diceOne.classList.remove("rotate");
+        diceTwo.classList.remove("rotate");
+      }, 500);
+
+      // show result
+      if (random1 > random2) {
+        resultView.innerText = "Player 1 Wins 🏆";
+      } else if (random1 < random2) {
+        resultView.innerText = "Player 2 Wins 🏆";
+      } else {
+        resultView.innerText = "It's a Draw 🎲";
+      }
+    });
+  </script>
+</body>
+
+</html>

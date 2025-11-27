@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Hand+Pre:wght@600&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Italiana&family=Martel+Sans:wght@200;300;400;600;700;800;900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Style+Script&family=Young+Serif&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+.container {
+    background-color: black;
+    color: yellow;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid white;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+
+}
+
+.main {
+    border: 2px solid aqua;
+    border-radius: 15px;
+    width: 400px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#head {
+    margin-bottom: 40px;
+    font-family: "Merriweather", sans-serif;
+    text-transform: capitalize;
+    color: aqua;
+}
+
+#result {
+    font-size: 20px;
+    font-family: "Roboto", sans-serif;
+    margin-bottom: 5px;
+}
+
+
+
+img {
+    height: 150px;
+    width: 150px;
+    margin: 5px;
+}
+
+.rotate{
+    transform: rotate(180 deg);
+}
+
+.dice {
+    display: flex;
+    gap: 10px;
+    margin: 15px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 5px;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+
+    /* border: 1px solid white; */
+}
+#rollDice{
+    display: none;
+}
+button  {
+    width: 120px;
+    height: 50px;
+    margin: 5px;
+    outline: none;
+    border: none;
+    background-color: rgb(243, 243, 46);
+    color: black;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 10px;
+    font-family: "Inter", sans-serif;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: yellow;
+    transition: 0.3s;
+}
